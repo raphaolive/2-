@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2%</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap'); 
+        /* font-family: 'Raleway', sans-serif; */
+        body{
+            background-color: rgb(129, 168, 139);
+            color: white;
+            font-family: 'Raleway', sans-serif;
+        }
+        ul{
+            list-style: none;
+        }
+        .btn-color{
+            width: 60px;
+            padding: 2px;
+            border: none;
+        }
+        div#container{
+            background-color: rgba(255, 255, 255, 0.303);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 400px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 9px 10px 0px #0000001a;
+
+        }
+        #container:hover{
+            box-shadow: 9px 10px 0px #00000008;
+            transition: 1.5s;
+        }
+        #myValue{
+            width: 70%;
+            text-align: center;
+            border: none;
+            padding: 5px;
+            border-radius: 10px 4px 4px 10px;
+            outline: none;
+            cursor: pointer;
+        }
+        #div-resultado{
+            font-size: 21px;
+        }
+        #btn{
+            margin-top: 10px;
+            text-align: center;
+            border: none;
+            border-radius: 4px 10px 10px 4px;
+            padding: 5px 15px;
+            background: rgba(255, 255, 255, 0.319);
+            color: gray;
+            cursor: pointer;
+        }
+        #btn:hover{
+            background-color: rgba(255, 255, 255, 0.624);
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <button id="btn-menu">&#9776</button>
+        <li><button class="btn-color">blue</button></li>
+        <li><button class="btn-color">green</button></li>
+        <li><button class="btn-color">purple</button></li>
+        <li><button class="btn-color">yelow</button></li>
+        <li><button class="btn-color">gray</button></li>
+    </ul>
+    <div id="container">
+        <h1>Facilitando a Vida %</h1>
+        <p>Para descobrir 2% de qualquer valor &#x1F447</p>
+        <input type="number" name="myValue" id="myValue" placeholder="Digite um valor:">
+        <button id="btn" onclick="calc()">Calc</button>
+        <div id="div-resultado">
+            <p id="result">Resultado</p>
+        </div>
+    </div>
+</body>
+<script>
+    function green(){
+        document.body.classList.toggle('green')
+    }
+    function blue(){
+        document.body.classList.toggle('blue')
+    }
+    function purple(){
+        document.body.classList.toggle('purple')
+    }
+    function yelow(){
+        document.body.classList.toggle('yelow')
+    }
+    function grey(){
+        document.body.classList.toggle('grey')
+    }
+    function calc(){
+        let theVal = document.getElementById('myValue').value
+        let theRes = document.getElementById('result')
+        if (theVal.length === 0){
+            window.alert('Digite um valor antes de continuar meu Amor! <3')
+        } else{
+            result.innerHTML = theVal / 100 * 2
+        }
+    }
+</script>
+</html>
